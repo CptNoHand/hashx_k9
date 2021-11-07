@@ -350,15 +350,15 @@ AddEventHandler('K9:CLIENT:SPAWN_K9', function()
   SetEntityHeading(DOG, 90)
   -- CREATE CAMERA
   -- Camera
-  local coords = GetOffsetFromEntityInWorldCoords(DOG, 2.0, 0, -1.0)
+  local coords = GetOffsetFromEntityInWorldCoords(DOG, -2.0, 0, -1.0)
   RenderScriptCams(false, false, 0, 1, 0)
   DestroyCam(cam, false)
   if(not DoesCamExist(cam)) then
       cam = CreateCam('DEFAULT_SCRIPTED_CAMERA', true)
       SetCamActive(cam, true)
       RenderScriptCams(true, false, 0, true, true)
-      SetCamCoord(cam, coords.x, coords.y, coords.z + 0.5)
-      SetCamRot(cam, 0.0, 0.0, GetEntityHeading(DOG) + 90)
+      SetCamCoord(cam, coords.x, coords.y, coords.z + 0.4)
+      SetCamRot(cam, 0.0, 0.0, GetEntityHeading(DOG) - 100)
   end
   --OPEN NUI
   IN_MENU = true
