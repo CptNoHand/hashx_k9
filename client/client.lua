@@ -160,7 +160,7 @@ function CheckForMenu()
   while IsControlPressed(0, K9_CONFIG.Key) do
     Citizen.Wait(0)
 
-    if IsDurationComplete(MENU_CD, 1500) then
+    if IsDurationComplete(MENU_CD, 500) then
       ACTION_CD = GetGameTimer() + 99 * 1000000
       OpenMenu("OPEN_K9_MENU")
       break
